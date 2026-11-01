@@ -1,0 +1,1852 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashad Malik - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@400;500;600;700&display=swap');
+
+        :root {
+            --bg-color: #ECECEC;
+            --primary-dark: #4b2c2d;
+            --accent-green: #7b8e51;
+            --text-muted: #5d693f;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--primary-dark);
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            user-select: none;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* --- NAVBAR --- */
+        nav ul {
+            background-color: var(--primary-dark);
+            list-style-type: none;
+            padding: 0 30px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin: 20px auto;
+            border-radius: 50px;
+            max-width: 1100px;
+            width: 90%;
+            height: 80px;
+        }
+
+        nav li {
+            margin-left: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--bg-color);
+            padding: 10px 15px;
+            font-size: 16px;
+            font-weight: 500;
+            display: inline-block;
+        }
+
+        .dew {
+            height: 60px;
+            width: 60px;
+            background-color: var(--bg-color);
+            border-radius: 50px;
+            margin-right: auto;
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--primary-dark);
+        }
+
+        .bttn {
+            height: 40px;
+            padding: 0 25px;
+            border-radius: 40px;
+            background-color: var(--bg-color);
+            color: var(--primary-dark);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            transition: 0.3s ease;
+        }
+
+        .bttn:hover {
+            background-color: var(--accent-green);
+            color: var(--bg-color);
+        }
+
+        /* --- MARQUEE --- */
+        .marquee-wrapper {
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            margin: 40px 0;
+        }
+
+        .marquee-content {
+            display: flex;
+            white-space: nowrap;
+            animation: scroll 15s linear infinite;
+        }
+
+        .hone {
+            color: transparent;
+            font-size: 78px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 900 !important;
+            letter-spacing: 2px;
+            opacity: 0.5;
+            gap: 100px;
+            margin: 0;
+            -webkit-text-stroke: 1.5px var(--text-muted);
+            padding-right: 50px;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* --- HERO SECTION --- */
+        .hero-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 20px 60px 20px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 360px;
+            gap: 40px;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .best {
+            color: var(--primary-dark);
+            font-size: 65px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            line-height: 1.1;
+            display: inline;
+        }
+
+        .rowe {
+            color: var(--accent-green);
+            font-size: 65px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            display: inline;
+        }
+
+        .head {
+            font-size: 28px;
+            color: var(--text-muted);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            margin: 10px 0 20px 0;
+        }
+
+        .para {
+            font-size: 15px;
+            color: var(--primary-dark);
+            line-height: 1.6;
+            margin-bottom: 30px;
+            max-width: 650px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 15px;
+        }
+
+        .bonn,
+        .boled {
+            height: 55px;
+            width: 160px;
+            border-radius: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 0.4s ease;
+        }
+
+        .bonn {
+            background-color: var(--primary-dark);
+            color: var(--bg-color);
+            border: 2px solid var(--primary-dark);
+        }
+
+        .boled {
+            background-color: transparent;
+            color: var(--primary-dark);
+            border: 2px solid var(--primary-dark);
+        }
+
+        .boled:hover {
+            background-color: var(--primary-dark);
+            color: var(--bg-color);
+            box-shadow: 0 5px 15px rgba(75, 44, 45, 0.3);
+        }
+
+        .hero-img {
+            width: 360px;
+            height: 360px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 10px 30px rgba(93, 105, 63, 0.3);
+            border: 4px solid var(--primary-dark);
+        }
+
+        /* --- SECTION HEADERS & ACCENTS --- */
+        .hahw {
+            height: 10px;
+            width: 100%;
+            background-color: var(--primary-dark);
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .qrqr,
+        .kmkm {
+            height: 10px;
+            width: 40%;
+            background-color: var(--accent-green);
+            position: absolute;
+            top: 0;
+        }
+
+        .qrqr {
+            left: 5%;
+        }
+
+        .kmkm {
+            right: 5%;
+        }
+
+        .opti,
+        .tipo {
+            height: 85px;
+            max-width: 800px;
+            width: 90%;
+            margin: 0 auto;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--accent-green);
+            transition: 0.3s ease;
+        }
+
+        .opti:hover,
+        .tipo:hover {
+            background-color: var(--bg-color);
+            box-shadow: 0 8px 20px rgba(93, 105, 63, 0.4);
+            border: 2px solid var(--accent-green);
+        }
+
+        .prorr {
+            color: var(--bg-color);
+            font-size: 50px;
+            font-family: 'Montserrat', sans-serif !important;
+            font-weight: 900 !important;
+            letter-spacing: -1px;
+            text-align: center;
+            transition: 0.3s ease;
+        }
+
+        .opti:hover .prorr,
+        .tipo:hover .prorr {
+            color: var(--accent-green);
+        }
+
+        /* --- ABOUT SECTION --- */
+        .about-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 500px 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-top: 60px;
+        }
+
+        .loh {
+            height: 500px;
+            width: 500px;
+            border-radius: 30px;
+            background-color: var(--primary-dark);
+            padding: 15px;
+            position: relative;
+        }
+
+        .yout {
+            height: 100%;
+            width: 100%;
+            border-radius: 20px;
+            background-color: var(--bg-color);
+            border: 2px solid var(--primary-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .bcv {
+            height: 130px;
+            width: 130px;
+            background-color: var(--accent-green);
+            border-radius: 50%;
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            border: 3px solid var(--primary-dark);
+            color: var(--bg-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .quik {
+            font-size: 32px;
+            font-family: 'Montserrat', sans-serif !important;
+            font-weight: 900 !important;
+            line-height: 1;
+        }
+
+        .bore {
+            font-size: 11px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+
+        .rabi {
+            font-size: 36px;
+            color: var(--primary-dark);
+            font-family: 'Montserrat', sans-serif !important;
+            font-weight: 900 !important;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hdse,
+        .asds {
+            font-size: 18px;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .about-divider {
+            border: none;
+            height: 2px;
+            background-color: var(--accent-green);
+            margin: 25px 0;
+        }
+
+        .stats-wrapper {
+            display: flex;
+            gap: 20px;
+        }
+
+        .cdsh,
+        .lklk {
+            height: 110px;
+            width: 110px;
+            background-color: var(--primary-dark);
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--bg-color);
+        }
+
+        .bnbn,
+        .ok {
+            font-size: 36px;
+            font-family: 'Montserrat', sans-serif !important;
+            font-weight: 900 !important;
+            line-height: 1;
+        }
+
+        .jame,
+        .zyt {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* --- SKILLS SECTION --- */
+        .skills-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-top: 60px;
+            flex-wrap: wrap;
+        }
+
+        .skill-box {
+            background-color: var(--bg-color);
+            border: 3px solid var(--primary-dark);
+            border-radius: 20px;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: 0.4s ease;
+            cursor: pointer;
+        }
+
+        .skill-box i {
+            font-size: 55px;
+            color: var(--primary-dark);
+            transition: 0.4s ease;
+        }
+
+        .skill-box h3 {
+            margin: 15px 0 5px 0;
+            font-size: 20px;
+            color: var(--primary-dark);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            text-transform: uppercase;
+            transition: 0.4s ease;
+        }
+
+        .skill-box p {
+            margin: 0;
+            color: var(--text-muted);
+            font-weight: 600;
+            transition: 0.4s ease;
+        }
+
+        .skill-box:hover {
+            background-color: var(--accent-green);
+            transform: translateY(-10px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+            border-color: var(--accent-green);
+        }
+
+        .skill-box:hover h3,
+        .skill-box:hover p,
+        .skill-box:hover i {
+            color: var(--bg-color);
+        }
+
+        /* --- RESPONSIVE BREAKPOINTS --- */
+        @media (max-width: 992px) {
+
+            .hero-grid,
+            .about-grid {
+                grid-template-columns: 1fr;
+                justify-items: center;
+                text-align: center;
+            }
+
+            .para,
+            .hdse,
+            .asds {
+                max-width: 100%;
+            }
+
+            .btn-group,
+            .stats-wrapper {
+                justify-content: center;
+            }
+
+            .loh {
+                width: 100%;
+                max-width: 450px;
+                height: 450px;
+            }
+
+            .prorr {
+                font-size: 32px;
+            }
+        }
+
+        .service-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .exc {
+            height: 400px;
+            width: 430px;
+            background-color: #4b2c2d;
+            border-radius: 40px;
+            margin-top: 60px;
+            margin-left: 80px;
+            padding-left: 15px;
+            padding-top: 15px;
+
+        }
+
+        .cor {
+            height: 370px;
+            width: 400px;
+            background-color: #ECECEC;
+            border-radius: 40px;
+        }
+
+
+        .cor:hover {
+            background-color: #7b8e51;
+            color: #ECECEC;
+        }
+
+        .civic {
+            height: 400px;
+            width: 430px;
+            background-color: #4b2c2d;
+            border-radius: 40px;
+            margin-top: -400px;
+            margin-left: 640px;
+            padding-left: 15px;
+            padding-top: 15px;
+
+        }
+
+        .corola {
+            height: 370px;
+            width: 400px;
+            background-color: #ECECEC;
+            border-radius: 40px;
+        }
+
+        .corola:hover {
+            background-color: #7b8e51;
+            color: #ECECEC;
+        }
+
+        .toyota {
+            height: 400px;
+            width: 430px;
+            background-color: #4b2c2d;
+            border-radius: 40px;
+            margin-top: 50px;
+            margin-left: 80px;
+            padding-left: 15px;
+            padding-top: 15px;
+
+        }
+
+        .revo {
+            height: 370px;
+            width: 400px;
+            background-color: #ECECEC;
+            border-radius: 40px;
+        }
+
+        .revo:hover {
+            background-color: #7b8e51;
+            color: #ECECEC;
+        }
+
+        .toyoti {
+            height: 400px;
+            width: 430px;
+            background-color: #4b2c2d;
+            border-radius: 40px;
+            margin-top: -400px;
+            margin-left: 650px;
+            padding-left: 15px;
+            padding-top: 15px;
+
+        }
+
+        .revi {
+            height: 370px;
+            width: 400px;
+            background-color: #ECECEC;
+            border-radius: 40px;
+        }
+
+        .revi:hover {
+            background-color: #7b8e51;
+            color: #ECECEC;
+        }
+
+        .contact-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .what {
+            height: 600px;
+            width: 500px;
+            background-color: #4b2c2d;
+            border-radius: 30px;
+            margin-top: 60px;
+            margin-left: 320px;
+            padding-left: -3px;
+            padding-top: 20px;
+
+        }
+
+        .where {
+            height: 560px;
+            width: 460px;
+            background-color: #ECECEC;
+            margin-left: 20px;
+            padding-top: 30px;
+            border-radius: 30px;
+        }
+
+        /* .where:hover{
+            background-color: #7b8e51;
+             color: white; 
+        } */
+        .boon {
+            height: 50px;
+            width: 460px;
+            background-color: #4b2c2d;
+            border-radius: 15px;
+            border: 1px solid black;
+            font-size: 25px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-left: 50px;
+            margin-top: 10px;
+        }
+
+        /* .boon:hover{
+            background-color: #ECECEC;
+            color: black;
+        } */
+        .fote {
+            height: 100%;
+            width: 100%;
+            background-color: #4b2c2d;
+        }
+
+        .fotee {
+            width: 100%;
+            height: 130px;
+
+        }
+
+        /* ================= RESPONSIVE DESIGN ================= */
+
+        img {
+            max-width: 100%;
+        }
+
+        @media (max-width: 1100px) {
+            nav ul {
+                width: 94%;
+                padding: 0 20px;
+            }
+
+            .hero-section,
+            .about-section,
+            .skills-section,
+            .service-section,
+            .contact-section {
+                width: 94%;
+            }
+
+            .hero-grid {
+                grid-template-columns: minmax(0, 1fr) 300px;
+                gap: 25px;
+            }
+
+            .hero-img {
+                width: 300px;
+                height: 300px;
+            }
+
+            .about-grid {
+                grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+                gap: 35px;
+            }
+
+            .loh {
+                width: min(100%, 450px);
+                height: 450px;
+            }
+
+            .exc,
+            .civic,
+            .toyota {
+                position: relative;
+                margin: 30px auto 0;
+                width: min(100%, 370px);
+            }
+
+            .civic,
+            .toyota {
+                margin-top: 30px;
+            }
+
+            .cor,
+            .corola,
+            .revo {
+                width: calc(100% - 30px);
+            }
+
+            .what {
+                width: min(100%, 600px);
+                margin: 60px auto 0;
+            }
+
+            .where {
+                width: calc(100% - 40px);
+                margin: 0 20px;
+            }
+
+            .boon,
+            .where input,
+            .where textarea {
+                max-width: calc(100% - 40px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                height: auto;
+                min-height: 70px;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 4px;
+                padding: 10px 15px;
+                border-radius: 25px;
+            }
+
+            .dew {
+                width: 50px;
+                height: 50px;
+                margin-right: 10px;
+            }
+
+            nav li {
+                margin-left: 0;
+            }
+
+            nav a {
+                padding: 8px 10px;
+                font-size: 14px;
+            }
+
+            nav li:last-child {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .bttn {
+                height: 38px;
+                padding: 0 18px;
+                font-size: 12px;
+                max-width: 100%;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+
+            .marquee-wrapper {
+                margin: 25px 0;
+            }
+
+            .hone {
+                font-size: 48px;
+                padding-right: 30px;
+            }
+
+            .hero-section {
+                padding: 10px 10px 45px;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 35px;
+            }
+
+            .best,
+            .rowe {
+                font-size: clamp(40px, 9vw, 58px);
+            }
+
+            .head {
+                font-size: clamp(21px, 5vw, 28px);
+            }
+
+            .para {
+                font-size: 14px;
+                max-width: 100%;
+            }
+
+            .btn-group {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .hero-img {
+                width: min(75vw, 300px);
+                height: min(75vw, 300px);
+            }
+
+            .about-section,
+            .skills-section,
+            .service-section,
+            .contact-section {
+                padding: 40px 10px;
+            }
+
+            .opti,
+            .tipo {
+                height: auto;
+                min-height: 70px;
+                padding: 15px;
+            }
+
+            .prorr {
+                font-size: clamp(25px, 7vw, 38px);
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 45px;
+                margin-top: 40px;
+                text-align: center;
+            }
+
+            .loh {
+                width: min(100%, 400px);
+                height: min(100vw, 400px);
+                margin: 0 auto;
+            }
+
+            .yout i {
+                font-size: min(55vw, 180px) !important;
+            }
+
+            .bcv {
+                width: 105px;
+                height: 105px;
+                right: -8px;
+                bottom: -8px;
+            }
+
+            .quik {
+                font-size: 28px;
+            }
+
+            .rabi {
+                font-size: clamp(27px, 6vw, 36px);
+            }
+
+            .hdse,
+            .asds {
+                font-size: 15px;
+            }
+
+            .stats-wrapper {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .skills-container {
+                margin-top: 35px;
+                gap: 18px;
+            }
+
+            .skill-box {
+                width: min(42vw, 180px);
+                height: 180px;
+            }
+
+            .skill-box i {
+                font-size: 45px;
+            }
+
+            .skill-box h3 {
+                font-size: 17px;
+            }
+
+            .service-section {
+                overflow: hidden;
+            }
+
+            .exc,
+            .civic,
+            .toyota {
+                height: auto;
+                min-height: 450px;
+                width: min(100%, 370px);
+                margin: 30px auto 0;
+                padding: 15px;
+            }
+
+            .cor,
+            .corola,
+            .revo {
+                height: auto;
+                min-height: 420px;
+                width: 100%;
+                padding-bottom: 25px;
+            }
+
+            .exc .pos br,
+            .civic .klalo br,
+            .toyota .klalo br {
+                display: none;
+            }
+
+            .doll,
+            .hils {
+                font-size: 30px !important;
+                margin-left: 20px !important;
+                padding-left: 0 !important;
+            }
+
+            .pos,
+            .klalo {
+                margin-left: 20px !important;
+                padding-left: 0 !important;
+                padding-right: 20px;
+                line-height: 1.6;
+            }
+
+            .wonll,
+            .wonl {
+                padding-left: 20px !important;
+            }
+
+            .what {
+                height: auto;
+                min-height: 0;
+                width: 100%;
+                margin: 40px auto 0;
+                padding: 20px 0;
+            }
+
+            .where {
+                height: auto;
+                min-height: 0;
+                width: calc(100% - 20px);
+                margin: 0 10px;
+                padding: 25px 10px 30px;
+            }
+
+            .byd {
+                font-size: 28px;
+            }
+
+            .where input,
+            .where textarea,
+            .boon {
+                display: block;
+                width: 100% !important;
+                max-width: 100%;
+                margin-left: 0 !important;
+            }
+
+            .boon {
+                font-size: 20px;
+            }
+
+            .fotee {
+                height: auto;
+                min-height: 120px;
+            }
+
+            .foter {
+                font-size: 25px;
+            }
+
+            .sonao {
+                font-size: 13px;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul {
+                width: 96%;
+                padding: 10px 8px;
+            }
+
+            .dew {
+                width: 45px;
+                height: 45px;
+                margin-right: 4px;
+            }
+
+            nav a {
+                font-size: 12px;
+                padding: 7px 6px;
+            }
+
+            .bttn {
+                font-size: 10px;
+                padding: 0 12px;
+            }
+
+            .hone {
+                font-size: 35px;
+                -webkit-text-stroke: 1px var(--text-muted);
+            }
+
+            .best,
+            .rowe {
+                font-size: 36px;
+            }
+
+            .head {
+                font-size: 20px;
+            }
+
+            .para {
+                font-size: 13px;
+                line-height: 1.55;
+            }
+
+            .bonn,
+            .boled {
+                width: 140px;
+                height: 50px;
+                font-size: 13px;
+            }
+
+            .hero-img {
+                width: 240px;
+                height: 240px;
+            }
+
+            .prorr {
+                font-size: 23px;
+            }
+
+            .loh {
+                height: 300px;
+            }
+
+            .bcv {
+                width: 85px;
+                height: 85px;
+            }
+
+            .quik {
+                font-size: 22px;
+            }
+
+            .bore {
+                font-size: 8px;
+            }
+
+            .skill-box {
+                width: 145px;
+                height: 155px;
+            }
+
+            .skill-box i {
+                font-size: 38px;
+            }
+
+            .skill-box h3 {
+                font-size: 14px;
+                margin: 10px 0 3px;
+            }
+
+            .skill-box p {
+                font-size: 12px;
+            }
+
+            .exc,
+            .civic,
+            .toyota {
+                min-height: 400px;
+            }
+
+            .cor,
+            .corola,
+            .revo {
+                min-height: 370px;
+            }
+
+            .doll,
+            .hils {
+                font-size: 26px !important;
+            }
+
+            .wonll,
+            .wonl {
+                font-size: 18px !important;
+                padding-top: 20px !important;
+            }
+
+            .foter {
+                font-size: 20px;
+            }
+        }
+
+        .cony {
+            height: 110px;
+            width: 340px;
+            background-color: #7b8e51;
+            color: #ECECEC;
+            border-radius: 20px;
+            margin-top: -25px;
+            margin-left: 50px;
+
+
+
+        }
+
+        .conye {
+            height: 110px;
+            width: 340px;
+            background-color: #7b8e51;
+            color: #ECECEC;
+            border-radius: 20px;
+            margin-top: -25px;
+            margin-left: 50px;
+        }
+
+        .conyee {
+            height: 110px;
+            width: 340px;
+            background-color: #7b8e51;
+            color: #ECECEC;
+            border-radius: 20px;
+            margin-top: -25px;
+            margin-left: 50px;
+        }
+
+        /* ===== FINAL RESPONSIVE FIXES ===== */
+        html,
+        body {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        @media (max-width: 900px) {
+            nav ul {
+                height: auto;
+                min-height: 70px;
+                flex-wrap: wrap;
+            }
+
+            .hero-grid,
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text {
+                width: 100%;
+            }
+
+            .hero-image-wrapper {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+            }
+
+            .about-text-content {
+                width: 100%;
+            }
+
+            .skills-container {
+                width: 100%;
+            }
+
+            .service-section {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .exc,
+            .civic,
+            .toyota {
+                position: relative !important;
+                top: auto !important;
+                left: auto !important;
+                margin: 30px auto !important;
+                width: min(100%, 370px) !important;
+            }
+
+            .cor,
+            .corola,
+            .revo {
+                width: 100% !important;
+                height: auto !important;
+                min-height: 390px;
+            }
+
+            .what {
+                width: min(100%, 600px) !important;
+                height: auto !important;
+                margin: 40px auto !important;
+                padding: 20px !important;
+            }
+
+            .where {
+                width: 100% !important;
+                height: auto !important;
+                margin: 0 !important;
+                padding: 25px 15px 30px !important;
+            }
+
+            .cony,
+            .conye,
+            .conyee {
+                width: 100% !important;
+                height: auto !important;
+                min-height: 95px;
+                margin: 20px 0 !important;
+                padding: 15px 20px !important;
+            }
+
+            .cony h1,
+            .conye h1,
+            .conyee h1,
+            .cony h5,
+            .conye h5,
+            .conyee h5 {
+                margin: 0 !important;
+                padding: 0 !important;
+                overflow-wrap: anywhere;
+            }
+        }
+
+        @media (max-width: 600px) {
+            nav ul {
+                width: calc(100% - 20px);
+                margin: 10px auto;
+                padding: 10px;
+                gap: 2px;
+            }
+
+            nav li {
+                flex: 0 0 auto;
+            }
+
+            nav a {
+                padding: 7px 8px;
+                font-size: 12px;
+            }
+
+            nav li:last-child {
+                width: 100%;
+                margin-top: 5px;
+            }
+
+            .bttn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .marquee-wrapper {
+                margin: 20px 0;
+            }
+
+            .hone {
+                font-size: clamp(30px, 9vw, 48px);
+            }
+
+            .hero-section {
+                padding: 10px 15px 40px;
+            }
+
+            .best,
+            .rowe {
+                font-size: clamp(32px, 10vw, 48px);
+            }
+
+            .head {
+                font-size: clamp(19px, 5vw, 25px);
+            }
+
+            .para {
+                font-size: 14px;
+                line-height: 1.6;
+            }
+
+            .btn-group {
+                gap: 10px;
+            }
+
+            .bonn,
+            .boled {
+                width: 145px;
+                height: 50px;
+            }
+
+            .hero-img {
+                width: min(70vw, 260px);
+                height: min(70vw, 260px);
+            }
+
+            .about-section,
+            .skills-section,
+            .service-section,
+            .contact-section {
+                width: 100%;
+                padding: 40px 15px;
+            }
+
+            .opti,
+            .tipo {
+                width: 100%;
+            }
+
+            .prorr {
+                font-size: clamp(23px, 7vw, 34px);
+            }
+
+            .about-grid {
+                margin-top: 35px;
+                gap: 35px;
+            }
+
+            .loh {
+                width: min(100%, 330px);
+                height: 330px;
+            }
+
+            .bcv {
+                width: 90px;
+                height: 90px;
+                right: -5px;
+                bottom: -5px;
+            }
+
+            .stats-wrapper {
+                gap: 12px;
+            }
+
+            .cdsh,
+            .lklk {
+                width: 105px;
+                height: 105px;
+            }
+
+            .skills-container {
+                gap: 12px;
+                margin-top: 25px;
+            }
+
+            .skill-box {
+                width: calc(50% - 8px);
+                max-width: 165px;
+                height: 160px;
+            }
+
+            .skill-box i {
+                font-size: 38px;
+            }
+
+            .skill-box h3 {
+                font-size: 14px;
+            }
+
+            .skill-box p {
+                font-size: 12px;
+            }
+
+            .exc,
+            .civic,
+            .toyota {
+                width: 100% !important;
+                max-width: 350px !important;
+                min-height: 0 !important;
+                padding: 10px !important;
+                border-radius: 28px;
+            }
+
+            .cor,
+            .corola,
+            .revo {
+                min-height: 360px !important;
+                border-radius: 28px;
+                padding-bottom: 20px;
+            }
+
+            .doll,
+            .hils {
+                font-size: 28px !important;
+            }
+
+            .pos,
+            .klalo {
+                font-size: 14px;
+                padding-right: 15px !important;
+                margin-left: 20px !important;
+            }
+
+            .wonll,
+            .wonl {
+                font-size: 17px !important;
+                padding-left: 20px !important;
+            }
+
+            .what {
+                max-width: 100% !important;
+                border-radius: 25px;
+            }
+
+            .where {
+                border-radius: 22px;
+            }
+
+            .byd {
+                font-size: 25px;
+            }
+
+            .cony,
+            .conye,
+            .conyee {
+                border-radius: 15px;
+            }
+
+            .cony h5,
+            .conye h5,
+            .conyee h5 {
+                font-size: 15px !important;
+            }
+        }
+
+        @media (max-width: 380px) {
+            nav a {
+                font-size: 11px;
+                padding: 6px 5px;
+            }
+
+            .dew {
+                width: 42px;
+                height: 42px;
+            }
+
+            .best,
+            .rowe {
+                font-size: 30px;
+            }
+
+            .btn-group {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .bonn,
+            .boled {
+                width: 100%;
+                max-width: 220px;
+            }
+
+            .skill-box {
+                width: 100%;
+                max-width: 220px;
+            }
+
+            .skills-container {
+                flex-direction: column;
+            }
+
+            .stats-wrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .nove {
+            height: 410px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <div class="dew"><i class="fa-solid fa-fire" style="font-size: 30px;"></i></div>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="#skill">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+                <a href="https://myaccount.google.com/google-account-email?hl=enashadmalik1542008@gmail.com">
+                    <div class="bttn">ashadmalik1542008@gmail.com</div>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="marquee-wrapper">
+        <div class="marquee-content">
+            <h1 class="hone"> DEVELOPER & DESIGNER DEVELOPER & DESIGNER DEVELOPER & DESIGNER DEVELOPER & DESIGNER</h1>
+            <h1 class="hone"> DEVELOPER & DESIGNER DEVELOPER & DESIGNER DEVELOPER & DESIGNER DEVELOPER & DESIGNER</h1>
+        </div>
+    </div>
+
+    <section class="hero-section" id="home">
+        <div class="hero-grid">
+            <div class="hero-text">
+                <div>
+                    <h1 class="best">Hey, I'm </h1>
+                    <h1 class="rowe">Ashad Malik</h1>
+                </div>
+                <h2 class="head">Full Stack Web Developer And Graphic Designer</h2>
+                <p class="para">
+                    I am a passionate Full Stack Web Developer and Graphic Designer who creates modern, responsive, and
+                    user-friendly websites. I work on both front-end and back-end development to build functional and
+                    professional web applications. I also create creative designs such as posters, social media posts,
+                    banners, flyers, and thumbnails. I focus on clean design, good performance, and attention to detail
+                    in every project. My goal is to deliver high-quality digital solutions that meet clients’
+                    requirements and make their ideas come to life.
+
+                </p>
+                <div class="btn-group">
+                    <button class="bonn">Hire me</button>
+                    <button class="boled" onclick="downloadCV()">Download CV</button>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <img class="hero-img" src="portfolio.png">
+            </div>
+        </div>
+    </section>
+
+    <div class="marquee-wrapper">
+        <div class="marquee-content">
+            <h1 class="hone"> DEVELOPER & DESIGNER DEVELOPER & DESIGNER DEVELOPER & DESIGNER DEVELOPER & DESIGNER</h1>
+            <h1 class="hone"> DEVELOPER & DESIGNER DEVELOPER & DESIGNER DEVELOPER & DESIGNER DEVELOPER & DESIGNER</h1>
+        </div>
+    </div>
+
+    <section class="about-section" id="about">
+        <div class="hahw">
+            <div class="qrqr"></div>
+            <div class="kmkm"></div>
+        </div>
+        <div class="opti">
+            <h1 class="prorr">BEHIND THE CODE</h1>
+        </div>
+
+        <div class="about-grid">
+            <div class="loh">
+                <div class="yout">
+                    <i class="fa-solid fa-fire" style="font-size: 240px; color: var(--primary-dark);"></i>
+                    <div class="bcv">
+                        <span class="quik">1 +</span>
+                        <span class="bore">YEARS OF CODING</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-text-content">
+                <h1 class="rabi">CRAFTING DIGITAL EXPERIENCES WITH PURPOSE AND PASSION.</h1>
+                <p class="hdse">I don't just write code; I build digital ecosystems. Based at the intersection of design
+                    and engineering, I specialize in transforming complex problems into elegant, intuitive interfaces.
+                </p>
+                <p class="asds">My approach is rooted in clean architecture, pixel-perfect design, and relentless
+                    pursuit of performance. Whether it's a seamless front-end animation or a robust back-end
+                    architecture, I ensure every layer of the stack serves the ultimate user experience.</p>
+
+                <hr class="about-divider">
+
+                <div class="stats-wrapper">
+                    <div class="cdsh">
+                        <span class="bnbn">20+</span>
+                        <span class="jame">Projects</span>
+                    </div>
+                    <div class="lklk">
+                        <span class="ok">99%</span>
+                        <span class="zyt">Dedication</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="marquee-wrapper">
+        <div class="marquee-content">
+            <h1 class="hone"> DEVELOPER & DESIGNER DEVELOPER & DESIGNER DEVELOPER & DESIGNER DEVELOPER & DESIGNER</h1>
+            <h1 class="hone"> DEVELOPER & DESIGNER DEVELOPER & DESIGNER DEVELOPER & DESIGNER DEVELOPER & DESIGNER</h1>
+        </div>
+    </div>
+
+    <section class="skills-section" id="skill">
+        <div class="hahw">
+            <div class="qrqr"></div>
+            <div class="kmkm"></div>
+        </div>
+        <div class="tipo">
+            <h1 class="prorr">TECHNICAL SKILLS</h1>
+        </div>
+
+        <div class="skills-container">
+            <div class="skill-box">
+                <i class="fa-brands fa-html5"></i>
+                <h3>HTML5</h3>
+                <p>Advanced</p>
+            </div>
+            <div class="skill-box">
+                <i class="fa-brands fa-css3-alt"></i>
+                <h3>CSS3</h3>
+                <p>Advanced</p>
+            </div>
+            <div class="skill-box">
+                <i class="fa-brands fa-js"></i>
+                <h3>JavaScript</h3>
+                <p>Intermediate</p>
+            </div>
+            <div class="skill-box">
+                <i class="fa-brands fa-php"></i>
+                <h3>PHP</h3>
+                <p>Intermediate</p>
+            </div>
+            <div class="skill-box">
+                <i class="fa-solid fa-database"></i>
+                <h3>MySQL</h3>
+                <p>Intermediate</p>
+            </div>
+        </div>
+
+        <div class="skills-container">
+            <div class="skill-box">
+                <i class="fa-brands fa-css3-alt"></i>
+                <h3>bootstrape</h3>
+                <p>Advanced</p>
+            </div>
+            <div class="skill-box">
+                <i class="fa-brands fa-js"></i>
+                <h3>Json</h3>
+                <p>Intermediate</p>
+            </div>
+            <div class="skill-box">
+                <i class="fa-regular fa-file-excel"></i>
+                <h3>XML</h3>
+                <p>Intermediate</p>
+            </div>
+            <div class="skill-box">
+                <i class="fa-brands fa-wordpress"></i>
+                <h3>WordPress</h3>
+                <p>Intermediate</p>
+            </div>
+            <div class="skill-box">
+                <i class="fa-regular fa-file-word"></i>
+                <h3>Ms Word</h3>
+                <p>Advanced</p>
+            </div>
+        </div>
+
+        <div class="skills-container">
+            <div class="skill-box">
+                <i class="fa-regular fa-file-powerpoint"></i>
+                <h3 class="pks" style="font-size: 18px;">Ms powerpoint</h3>
+                <p>Advanced</p>
+            </div>
+            <div class="skill-box">
+                <i class="fa-sharp fa-regular fa-file-excel"></i>
+                <h3>Ms Excel</h3>
+                <p>Intermediate</p>
+            </div>
+            <div class="skill-box">
+                <i class="fa-solid fa-pen-nib"></i>
+                <h3>Photoshop</h3>
+                <p>Intermediate</p>
+            </div>
+            <div class="skill-box">
+
+                <i class="fa-solid fa-palette"></i>
+                <h3>Illustrator</h3>
+                <p>Intermediate</p>
+            </div>
+            <div class="skill-box">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <h3>Canva</h3>
+                <p>Intermediate</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="marquee-wrapper">
+        <div class="marquee-content">
+            <h1 class="hone"> DEVELOPER & DESIGNER DEVELOPER & DESIGNER DEVELOPER & DESIGNER DEVELOPER & DESIGNER</h1>
+            <h1 class="hone"> DEVELOPER & DESIGNER DEVELOPER & DESIGNER DEVELOPER & DESIGNER DEVELOPER & DESIGNER</h1>
+        </div>
+    </div>
+
+    <section class="service-section" id="service">
+        <div class="hahw">
+            <div class="qrqr"></div>
+            <div class="kmkm"></div>
+        </div>
+        <div class="tipo">
+            <h1 class="prorr">EXPERTISE</h1>
+        </div>
+
+        <div class="exc">
+            <div class="cor">
+                <i class="fa-solid fa-code" style="color: rgb(88, 55, 55); font-size: 50px; margin-top: 30px;"></i>
+                <h3 style="font-size: 38px; margin-left: 35px; margin-top: 30px;" class="doll">Frontend Dev</h3>
+                <p style="margin-left: 35px;" class="pos">Building high-fidelity, interactive user <br> interfaces with
+                    crisp, pixel-perfect and <br> accuracy. Fully dynamic layouts styled <br> structurally for stunning
+                    modern <br> responsiveness.</p>
+                <h2 style="color:rgb(88, 55, 55); padding-left: 35px; padding-top: 28px;" class="wonll">Explore Project
+                    Stack -></h2>
+            </div>
+        </div>
+        <div class="civic">
+            <div class="corola">
+                <i class="fa-solid fa-server"
+                    style="color: rgb(88, 55, 55); font-size: 50px; margin-left: 40px; margin-top: 30px;"></i>
+                <h2 style="font-size: 38px; padding-left: 35px; padding-top: 35px; " class="hils">Backend Data</h2>
+                <p style="padding-left: 35px;" class="klalo">Architecting reliable back-end logic, <br> API management,
+                    and fast database <br> systems utilizing clean PHP and <br> structural queries for secure <br>
+                    operations</p>
+                <h2 style="color:rgb(88, 55, 55); padding-left: 35px; padding-top: 28px;" class="wonl">Explore Project
+                    Stack -></h2>
+            </div>
+        </div>
+
+        <div class="nove">
+            <div class="toyota">
+                <div class="revo">
+                    <i class="fa-solid fa-palette"
+                        style="color: rgb(88, 55, 55); font-size: 50px; margin-left: 40px; margin-top: 30px;"></i>
+                    <h2 style="font-size: 38px; padding-left: 20px; padding-top: 35px; " class="hils">Graphic Design
+                    </h2>
+                    <p style="padding-left: 35px;" class="klalo">I am a creative and passionate Graphic Designer.
+                        I create modern, clean, and eye-catching designs.
+                        I can design posters, social media posts, banners, flyers, and thumbnails.
+                        I focus on creativity, quality, and attention to detail.</p>
+                    <h2 style="color:rgb(88, 55, 55); padding-left: 35px; padding-top: 15px;" class="wonl">Explore
+                        Project Stack -></h2>
+                </div>
+            </div>
+
+            <div class="toyoti">
+                <div class="revi">
+                    <i class="fa-regular fa-folder-open"
+                        style="color: rgb(88, 55, 55); font-size: 50px; margin-left: 40px; margin-top: 30px;"></i>
+                    <h2 style="font-size: 38px; padding-left: 20px; padding-top: 35px; " class="hils">MS Office</h2>
+                    <p style="padding-left: 35px;" class="klalo">Document creation, editing, formatting, and report writing and Data entry, spreadsheets, formulas, tables, and basic data analysis and Professional presentations, slide designing, and visual content creation.</p>
+                    <h2 style="color:rgb(88, 55, 55); padding-left: 35px; padding-top: 28px;" class="wonl">Explore
+                        Project Stack -></h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="marquee-wrapper">
+        <div class="marquee-content">
+            <h1 class="hone"> DEVELOPER & DESIGNER DEVELOPER & DESIGNER DEVELOPER & DESIGNER DEVELOPER & DESIGNER</h1>
+            <h1 class="hone"> DEVELOPER & DESIGNER DEVELOPER & DESIGNER DEVELOPER & DESIGNER DEVELOPER & DESIGNER</h1>
+        </div>
+    </div>
+    <section class="contact-section" id="contact">
+        <div class="hahw">
+            <div class="qrqr"></div>
+            <div class="kmkm"></div>
+        </div>
+        <div class="tipo">
+            <h1 class="prorr">CONTACT US</h1>
+        </div>
+        <div class="what">
+            <div class="where">
+                <h1 style="text-align: center;" class="byd">Send a Message</h1>
+                <!-- <form action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="2341d362-aca1-411a-971a-3ecca22018d5">
+   <input style="height: 50px; width: 460px; font-size: 20px;  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; padding-left: 30px; margin-top: 30px; margin-left: 50px; border-radius: 10px; border: 1px solid rgb(160, 160, 160);" type="text" name="FullName" placeholder="FullName"><br>
+   <input style="  height: 50px; width: 460px; font-size: 20px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; padding-left: 30px; margin-top: 20px; margin-left: 50px;  border-radius: 10px; border: 1px solid rgb(160, 160, 160);" type="text" name="Email" placeholder="Email"><br>
+   <input style="height: 50px; width: 460px;font-size: 20px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; padding-left: 30px; margin-top: 20px; margin-left: 50px;  border-radius: 10px; border: 1px solid rgb(160, 160, 160);" type="number" name="PhoneNumber" placeholder="PhoneNumber"><br>
+   <textarea style="height: 150px; width: 460px; font-size: 20px; padding-top: 10px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; padding-left: 30px; margin-top: 20px; margin-left: 50px;  border-radius: 10px; border: 1px solid rgb(160, 160, 160);" name="Message" placeholder="Your Message..." required></textarea>
+   <button class="boon">Send Message</button>
+</div> -->
+                <div class="cony">
+                    <h1 style="font-size: 20px; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin-top: 50PX; padding-left: 40px; padding-top: 20px;  "
+                        class="hanb">Phone</h1>
+                    <h5 style="font-size: 20px; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; padding-left: 40px; padding-top: 10px;"
+                        class="hanb">+92 3402370685</h5>
+                </div>
+                <div class="conye">
+                    <h1 style="font-size: 20px; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin-top: 50PX; padding-top: 20px; padding-left: 40px; "
+                        class="bonnb">Email</h1>
+                    <h5 style="font-size: 18px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; padding-left: 38px; padding-top: 10px;"
+                        class="bonnb">ashadmalik1542008@gmail.com</h5>
+                </div>
+                <div class="conyee">
+                    <h1 style="font-size: 20px; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin-TOP: 50PX; padding-top: 20px; padding-left: 40px; "
+                        class="bnob">Address</h1>
+                    <h5 style="font-size: 20px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; padding-left: 38px; padding-top: 10px;"
+                        class="bnob">Country:Pakistan , City:Karachi</h5>
+                </div>
+            </div>
+            </form>
+    </section>
+    <section class="fotee">
+        <div class="fote">
+            <h1 style="color: #ECECEC; text-align: center; padding-top: 20px;" class="foter">Let's Build Something
+                Amazing</h1>
+            <h4 style="color: #ECECEC; text-align: center; padding-top: 10px;" class="sonao">© 2026 Ashad Malik. All
+                Rights Reserved.</h4>
+        </div>
+    </section>
+    <script>
+        function downloadCV() {
+            const link = document.createElement("a");
+            link.href = "Modern Green and Maroon Resume Infographic.png";
+            link.download = "Modern Green and Maroon Resume Infographic.png";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+
+</body>
+
+</html>
